@@ -1,0 +1,14 @@
+{% extends 'usuario/base.html' %}
+{% load static %}
+{% block conteudo %}
+{% csrf_token %}
+<form action="{% url 'produtos' %}">
+    <div style="text-align: center;" class="container">
+      <h1>Bem vindo!</h1>
+      Nome <input name="nome" class="form-control-sm" type="text">
+      CPF <input name="idade" class="form-control-sm" type="text">
+      <button class="form-control-sm">Enviar</button>
+    </div>
+</form>
+
+{% endblock %}
